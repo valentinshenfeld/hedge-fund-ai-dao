@@ -2,12 +2,13 @@
 
 <div align="center">
 
- 
-
   [![Solidity](https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white)](https://soliditylang.org/)
   [![GCP](https://img.shields.io/badge/Google_Cloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
   [![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io/)
   [![Gemini](https://img.shields.io/badge/Gemini_AI-8E75FF?style=for-the-badge&logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
+  [![Chainlink](https://img.shields.io/badge/Chainlink-Oracle-%23375BD2?style=for-the-badge&logo=chainlink&logoColor=white)](https://chain.link/)
+
+
 
   <p align="center">
     <b>"Hedge Fund AI DAO"</b>
