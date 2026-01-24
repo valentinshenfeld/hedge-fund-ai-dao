@@ -1,0 +1,30 @@
+# Node modules
+/node_modules
+.env
+# Compilation output
+/dist
+
+# pnpm deploy output
+/bundle
+
+# Hardhat Build Artifacts
+/artifacts
+
+# Hardhat compilation (v2) support directory
+/cache
+
+# Typechain output
+/types
+/typechain-types
+/typechain
+
+# Hardhat coverage reports
+/coverage
+coverage.json
+# Hardhat config
+hardhat.config.ts   
+# Hardhat dependencies
+package-lock.json
+tsconfig.json
+package.json
+pnpm-lock.yaml

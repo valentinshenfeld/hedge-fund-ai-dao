@@ -2,8 +2,8 @@
 
 <div align="center">
 
-  [![Hardhat](https://img.shields.io/badge/Hardhat-v2.22-yellow?style=for-the-badge&logo=ethereum&logoColor=white)](https://hardhat.org/)
-[![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-363636?style=for-the-badge&logo=solidity&logoColor=white)](https://soliditylang.org/)
+  [![Hardhat](https://img.shields.io/badge/Hardhat-v3.0.0-yellow?style=for-the-badge&logo=ethereum&logoColor=white)](https://hardhat.org/)
+ [![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-363636?style=for-the-badge&logo=solidity&logoColor=white)](https://soliditylang.org/)
 [![OpenZeppelin](https://img.shields.io/badge/OpenZeppelin-Contracts-blue?style=for-the-badge&logo=openzeppelin&logoColor=white)](https://openzeppelin.com/)
   [![GCP](https://img.shields.io/badge/Google_Cloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
   [![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io/)
@@ -44,9 +44,13 @@
 │   ├── /agents                 # Agent Cards (agent.json) for A2A
 │   ├── /cre                    # Manifests for CRE workflow
 │   └── /networks               # Contract addresses and RPCs for different networks
-├── /contracts                  # Smart contracts (Solidity)
-│   ├── /lib                    # Libraries (OpenZeppelin)
-│   ├── /src
+├── /hardhat          # Smart contracts (Solidity)
+│   ├── /artifacts              # Compiler artifacts
+│   ├── /cache                  # Compiler cache
+│   ├── /ignition               # Deployment scripts
+│   ├── /node_modules           # Node modules
+│   ├── /scripts                # Hardhat scripts 
+│   ├── /contracts
 │   │   ├── /governance         # Governor, Timelock, Token (DAO)
 │   │   ├── /treasury           # AssetManager.sol, StrategyAdapters
 │   │   └── /interfaces         # IUniswap, IAave, IChainlink
