@@ -16,6 +16,58 @@
   </p>
 </div>
 
+## Project Structure
+<pre> 
+/hedge-fund-ai-dao
+├── /api                        # Спецификации API
+│   ├── /proto                  # gRPC Protobuf определения для A2A коммуникации
+│   └── /openapi                # OpenAPI спецификации для HTTP шлюзов
+├── /assets                     # Диаграммы, документация, вайтпейперы
+├── /build                      # Скомпилированные бинарные файлы и артефакты
+│   ├── /wasm                   # WASM модули для Chainlink CRE
+│   └── /bin                    # Исполняемые файлы агентов
+├── /cmd                        # Точки входа (Entry Points) приложений
+│   ├── /agent-analyst          # Агент сентимент-анализа (Go ADK)
+│   │   └── main.go
+│   ├── /agent-trader           # Агент исполнения стратегий
+│   │   └── main.go
+│   ├── /agent-risk             # Агент риск-менеджмента
+│   │   └── main.go
+│   ├── /mcp-server-x           # MCP Сервер для Twitter/X
+│   │   └── main.go
+│   ├── /mcp-server-evm         # MCP Сервер для EVM/zkEVM
+│   │   └── main.go
+│   └── /deployer               # Утилита для деплоя контрактов и воркфлоу
+├── /configs                    # Конфигурационные файлы
+│   ├── /agents                 # Agent Cards (agent.json) для A2A
+│   ├── /cre                    # Манифесты воркфлоу CRE
+│   └── /networks               # Адреса контрактов и RPC для разных сетей
+├── /contracts                  # Смарт-контракты (Solidity)
+│   ├── /lib                    # Библиотеки (OpenZeppelin)
+│   ├── /src
+│   │   ├── /governance         # Governor, Timelock, Token (DAO)
+│   │   ├── /treasury           # AssetManager.sol, StrategyAdapters
+│   │   └── /interfaces         # IUniswap, IAave, IChainlink
+│   ├── /test                   # Тесты контрактов (Foundry/Hardhat)
+│   └── hardhat.config.js
+├── /internal                   # Приватный код (бизнес-логика)
+│   ├── /adk                    # Обертки над Google GenAI SDK (промпты, настройки)
+│   ├── /a2a                    # Реализация протокола A2A (Server/Client)
+│   ├── /mcp                    # Клиенты для MCP серверов
+│   ├── /consensus              # Логика согласования решений внутри роя
+│   └── /wallet                 # Управление ключами агентов (для x402)
+├── /pkg                        # Публичные библиотеки (для переиспользования)
+│   ├── /x402                   # Клиентская реализация протокола x402
+│   ├── /cre-sdk                # Хелперы для взаимодействия с CRE
+│   └── /types                  # Общие типы данных (Signal, TradeOrder)
+├── /workflows                  # Исходный код воркфлоу CRE (Go)
+│   ├── /execution              # Логика исполнения сделок
+│   └── /verification           # Логика верификации данных
+├── go.mod                      # Определение модуля Go
+├── go.sum
+├── Makefile                    # Скрипты сборки и деплоя
+└── README.md
+</pre>
 ## Introduction
 This report presents a comprehensive architectural design for a "Hedge Fund AI DAO" application, functioning as a Decentralized Autonomous Organization (DAO) on the Ethereum network. The project integrates cutting-edge technology stacks: Google's GenAI SDK for Go (Go ADK) for building the agent's cognitive core, the Agent-to-Agent (A2A) protocol for swarm intelligence orchestration, the Model Context Protocol (MCP) for data entry standardization, the Chainlink Runtime Environment (CRE) for verifiable computation and inter-chain interoperability, and the x402 payment protocol for agent economic autonomy.
 
