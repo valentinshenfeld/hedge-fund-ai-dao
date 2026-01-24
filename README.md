@@ -7,8 +7,8 @@
   [![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io/)
   [![Gemini](https://img.shields.io/badge/Gemini_AI-8E75FF?style=for-the-badge&logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
   [![Chainlink](https://img.shields.io/badge/Chainlink-Oracle-%23375BD2?style=for-the-badge&logo=chainlink&logoColor=white)](https://chain.link/)
-
-
+  [![Go Support](https://img.shields.io/badge/Go-1.22+-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://go.dev/)
+  [![Go Reference](https://img.shields.io/badge/godoc-reference-blue?style=for-the-badge&logo=go&logoColor=white)](https://pkg.go.dev/)
 
   <p align="center">
     <b>"Hedge Fund AI DAO"</b>
@@ -21,6 +21,13 @@
 This report presents a comprehensive architectural design for a "Hedge Fund AI DAO" application, functioning as a Decentralized Autonomous Organization (DAO) on the Ethereum network. The project integrates cutting-edge technology stacks: Google's GenAI SDK for Go (Go ADK) for building the agent's cognitive core, the Agent-to-Agent (A2A) protocol for swarm intelligence orchestration, the Model Context Protocol (MCP) for data entry standardization, the Chainlink Runtime Environment (CRE) for verifiable computation and inter-chain interoperability, and the x402 payment protocol for agent economic autonomy.
 
 The goal of this architecture is to create a system capable of analyzing sentiment on the X social network (formerly Twitter), correlating it with activity on the EVM and zkEVM networks, and autonomously making investment decisions, executing them through OpenZeppelin smart contracts while independently paying for the necessary computing and data resources.
+
+## ⚙️ Backend & Orchestration (Go)
+The system's backend is built in Go, ensuring minimal latency when processing signals from AI agents and interacting with the blockchain.
+
+- **Concurrency:** Using Goroutines for parallel data streaming from DEXs and oracles.
+- **GCP SDK:** Native integration with Google Cloud (Vertex AI API, Pub/Sub, GKE).
+- **Protobuf/gRPC:** For ultra-fast communication between agents in a cluster.
 
 ## Agent-Centric Swarm Intelligence
 This option is focused on maximum flexibility and strategy complexity. The decision center is moved to a swarm of interacting agents. The CRE is used primarily as a secure gateway (Digital Transfer Agent) for delivering transactions already generated and signed by the swarm.
