@@ -1,7 +1,8 @@
 # Hedge Fund AI DAO
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=200&section=header&text=AI%20Hedge%20Fund%20Architecture&fontSize=50" />
+
+ 
 
   [![Solidity](https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white)](https://soliditylang.org/)
   [![GCP](https://img.shields.io/badge/Google_Cloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
@@ -9,9 +10,9 @@
   [![Gemini](https://img.shields.io/badge/Gemini_AI-8E75FF?style=for-the-badge&logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
 
   <p align="center">
-    <b>Автономная децентрализованная система управления активами на базе мультиагентной среды.</b>
+    <b>"Hedge Fund AI DAO"</b>
     <br />
-    <i>Интеграция LLM (Gemini 2.5), A2A, MCP, CRE и смарт-контрактов для автоматизированного трейдинга.</i>
+    <i>The project integrates cutting-edge technology stacks: Google's GenAI SDK for Go (Go ADK) for building the agent's cognitive core, the Agent-to-Agent (A2A) protocol for swarm intelligence orchestration, the Model Context Protocol (MCP) for data entry standardization, the Chainlink Runtime Environment (CRE) for verifiable computation and inter-chain interoperability, and the x402 payment protocol for agent economic autonomy.</i>
   </p>
 </div>
 
