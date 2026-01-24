@@ -1,0 +1,24 @@
+{
+    "agent_id": "agent-analyst-001",
+    "name": "Market Sentiment Analyst",
+    "description": "Monitors social sentiment on X/Twitter and correlates with EVM trends.",
+    "capabilities": [
+        {
+            "name": "analyze_sentiment",
+            "input_schema": {
+                "ticker": "string",
+                "network": "string"
+            },
+            "output_schema": {
+                "score": "float",
+                "risk_level": "string"
+            }
+        }
+    ],
+    "a2a_endpoint": "grpc://analyst-agent.internal:50051",
+    "pricing": {
+        "currency": "USDC",
+        "amount": "0.5",
+        "per": "request"
+    }
+}

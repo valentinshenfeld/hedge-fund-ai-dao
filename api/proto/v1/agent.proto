@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package v1;
+
+option go_package = "github.com/org/hedge-fund/api/proto/v1";
+
+// Сервис взаимодействия агентов
+service AgentService {
+  // Дискавери: Запрос возможностей агента
+  rpc GetCapabilities(AgentCardRequest) returns (AgentCard);
+  
+  // Постановка задачи (Task Management)
+  rpc SubmitTask(TaskRequest) returns (TaskResponse);
+  
+  // Стрим обновлений статуса задачи (для долгих вычислений)
+  rpc SubscribeTaskUpdates(TaskSubscription) returns (stream TaskUpdate);
+}
+
+message AgentCardRequest {}
+
+message AgentCard {
+  string agent_id = 1;
+  string name = 2;
+  string role = 3; // e.g., "analyst", "risk_manager"
+  repeated string capabilities = 4; // e.g., "analyze_sentiment", "check_liquidity"
+  string payment_address = 5; // Address for x402 payments
+}
+
+message TaskRequest {
+  string task_id = 1;
+  string type = 2; // e.g., "EVALUATE_TOKEN"
+  map<string, string> parameters = 3;
+  bytes artifact_payload = 4; // JSON or Binary data
+}
+
+message TaskResponse {
+  string task_id = 1;
+  enum Status {
+    ACCEPTED = 0;
+    REJECTED = 1;
+    PAYMENT_REQUIRED = 402; // Trigger for x402 flow
+  }
+  Status status = 2;
+  string message = 3;
+  string payment_request_details = 4; // If 402, instructions on how to pay
+}
+
+message TaskSubscription {
+  string task_id = 1;
+}
+
+message TaskUpdate {
+  string task_id = 1;
+  string status = 2;
+  bytes result_artifact = 3;
+}
