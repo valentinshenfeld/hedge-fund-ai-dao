@@ -8,7 +8,6 @@
   [![Gemini](https://img.shields.io/badge/Gemini_AI-8E75FF?style=for-the-badge&logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
   [![Chainlink](https://img.shields.io/badge/Chainlink-Oracle-%23375BD2?style=for-the-badge&logo=chainlink&logoColor=white)](https://chain.link/)
   [![Go Support](https://img.shields.io/badge/Go-1.22+-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://go.dev/)
-  [![Go Reference](https://img.shields.io/badge/godoc-reference-blue?style=for-the-badge&logo=go&logoColor=white)](https://pkg.go.dev/)
 
   <p align="center">
     <b>"Hedge Fund AI DAO"</b>
