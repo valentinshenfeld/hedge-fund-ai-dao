@@ -1,4 +1,4 @@
-# Hedge Fund AI DAO
+# Smart Fund AI
 
 <div align="center">
 
@@ -12,9 +12,9 @@
   [![Go Support](https://img.shields.io/badge/Go-1.22+-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://go.dev/)
 
   <p align="center">
-    <b>"Hedge Fund AI DAO"</b>
+    <b>"Smart Fund AI"</b>
     <br />
-    <i>The project integrates cutting-edge technology stacks: Google's GenAI SDK for Go (Go ADK) for building the agent's cognitive core, the Agent-to-Agent (A2A) protocol for swarm intelligence orchestration, the Model Context Protocol (MCP) for data entry standardization, the Chainlink Runtime Environment (CRE) for verifiable computation and inter-chain interoperability, and the x402 payment protocol for agent economic autonomy.</i>
+    <i>Smart Fund AI is a Decentralized Autonomous Organization (DAO) on the Ethereum network. The project integrates cutting-edge technology stacks: Google's GenAI SDK for Go (Go ADK) for building the agent's cognitive core, the Agent-to-Agent (A2A) protocol for swarm intelligence orchestration, the Model Context Protocol (MCP) for data entry standardization, the Chainlink Runtime Environment (CRE) for verifiable computation and inter-chain interoperability, and the x402 payment protocol for agent economic autonomy.</i>
   </p>
 </div>
 
@@ -55,7 +55,7 @@
 </pre>
 
 ## Introduction
-This report presents a comprehensive architectural design for a "Hedge Fund AI DAO" application, functioning as a Decentralized Autonomous Organization (DAO) on the Ethereum network. The project integrates cutting-edge technology stacks: Google's GenAI SDK for Go (Go ADK) for building the agent's cognitive core, the Agent-to-Agent (A2A) protocol for swarm intelligence orchestration, the Model Context Protocol (MCP) for data entry standardization, the Chainlink Runtime Environment (CRE) for verifiable computation and inter-chain interoperability, and the x402 payment protocol for agent economic autonomy.
+This report presents a comprehensive architectural design for a "Smart Fund AI" application, functioning as a Decentralized Autonomous Organization (DAO) on the Ethereum network. The project integrates cutting-edge technology stacks: Google's GenAI SDK for Go (Go ADK) for building the agent's cognitive core, the Agent-to-Agent (A2A) protocol for swarm intelligence orchestration, the Model Context Protocol (MCP) for data entry standardization, the Chainlink Runtime Environment (CRE) for verifiable computation and inter-chain interoperability, and the x402 payment protocol for agent economic autonomy.
 
 The goal of this architecture is to create a system capable of analyzing sentiment on the X social network (formerly Twitter), correlating it with activity on the EVM and zkEVM networks, and autonomously making investment decisions, executing them through OpenZeppelin smart contracts while independently paying for the necessary computing and data resources.
 
@@ -115,12 +115,12 @@ Since the fund operates in a multi-chain environment, the architecture allows fo
 
 ## ⚙️ Data Integration: MCP Implementation
 
-### X (Twitter) MCP Server
+- **X (Twitter) MCP Server**
 The server implements the specifics of Twitter API v2.
 Rate Limiting: The server monitors x-rate-limit-remaining headers. If the limit is reached, it returns the "Busy" status to the agent or automatically switches to another API key (if pooling is implemented).
 Context Filtering: The agent does not receive the entire JSON response from Twitter. The MCP server parses the response, extracting only the text, date, engagement metrics (likes/reposts), and the author's verification status to avoid cluttering the LLM context window.
 
-### EVM Activity Monitor
+- **EVM Activity Monitor**
 This MCP server connects to RPC nodes (via Alchemy or Infura).
 Events: It listens to Transfer and Swap event logs on key contracts.
 Abstraction: The agent requests "Show large PEPE purchases in the last 10 minutes." The MCP server translates this into a series of eth_getLogs requests filtered by topics and value thresholds, returning a summary to the agent in natural language or JSON.
