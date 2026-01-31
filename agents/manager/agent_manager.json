@@ -1,0 +1,10 @@
+{
+    "agent_id": "agent-manager-001",
+    "name": "Agent Manager",
+    "role": "manager",
+    "capabilities": [
+        "execute_signal",
+        "prepare_transaction"
+    ],
+    "a2a_endpoint": "grpc://agent-manager:50054"
+}

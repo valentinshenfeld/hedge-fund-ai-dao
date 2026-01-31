@@ -1,0 +1,10 @@
+{
+    "agent_id": "agent-trader-001",
+    "name": "DeFi Execution Trader",
+    "role": "trader",
+    "capabilities": [
+        "execute_signal",
+        "prepare_transaction"
+    ],
+    "a2a_endpoint": "grpc://agent-trader:50052"
+}

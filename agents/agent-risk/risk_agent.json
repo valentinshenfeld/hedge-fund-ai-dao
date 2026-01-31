@@ -1,0 +1,9 @@
+{
+    "agent_id": "agent-risk-001",
+    "name": "Risk Compliance Officer",
+    "role": "risk_manager",
+    "capabilities": [
+        "validate_risk"
+    ],
+    "a2a_endpoint": "grpc://agent-risk:50053"
+}

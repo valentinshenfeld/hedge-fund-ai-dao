@@ -24,11 +24,7 @@
 ├── /api                        # API specifications
 │   ├── /proto                  # gRPC Protobuf definitions for A2A communication
 │   └── /openapi                # OpenAPI specifications for HTTP gateways
-├── /assets                     # Diagrams, documentation, whitepapers
-├── /build                      # Compiled binary files and artifacts
-│   ├── /wasm                   # WASM modules for Chainlink CRE
-│   └── /bin                    # Executable agent files
-├── /cmd                        # Entry Points for applications
+├── /agents                        # Entry Points for applications
 │   ├── /agent-analyst          # Sentiment analysis agent (Go ADK)
 │   │   └── main.go
 │   ├── /agent-trader           # Strategy execution agent
@@ -39,11 +35,8 @@
 │   │   └── main.go
 │   ├── /mcp-server-evm         # MCP Server for EVM/zkEVM
 │   │   └── main.go
-│   └── /deployer               # Utility for deploying contracts and workflow
-├── /configs                    # Configuration files
-│   ├── /agents                 # Agent Cards (agent.json) for A2A
-│   ├── /cre                    # Manifests for CRE workflow
-│   └── /networks               # Contract addresses and RPCs for different networks
+│   └── /manager               # Utility for deploying contracts and workflow
+│   └── Makefile                    # Build and deployment scripts
 ├── /hardhat          # Smart contracts (Solidity)
 │   ├── /artifacts              # Compiler artifacts
 │   ├── /cache                  # Compiler cache
@@ -56,22 +49,8 @@
 │   │   └── /interfaces         # IUniswap, IAave, IChainlink
 │   ├── /test                   # Tests for contracts (Foundry/Hardhat)
 │   └── hardhat.config.js
-├── /internal                   # Private code (business logic)
-│   ├── /adk                    # Wrappers for Google GenAI SDK (prompts, settings)
-│   ├── /a2a                    # Implementation of A2A protocol (Server/Client)
-│   ├── /mcp                    # Clients for MCP servers
-│   ├── /consensus              # Logic for consensus of decisions within the swarm
-│   └── /wallet                 # Management of agent keys (for x402)
-├── /pkg                        # Public libraries (for reuse)
-│   ├── /x402                   # Client implementation of x402 protocol
-│   ├── /cre-sdk                # Helpers for interacting with CRE
-│   └── /types                  # Common types (Signal, TradeOrder)
-├── /workflows                  # Source code for CRE workflow (Go)
-│   ├── /execution              # Logic for executing trades
+----/workflow
 │   └── /verification           # Logic for verifying data
-├── go.mod                      # Go module definition
-├── go.sum
-├── Makefile                    # Build and deployment scripts
 └── README.md
 </pre>
 
